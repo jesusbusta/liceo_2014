@@ -31,7 +31,7 @@ body {
 <?php $cedula_a = $_REQUEST['cedula_a']; ?>
 
 <!-- EMPIEZA LA PAG -->
- <form method="post" name="form1" id="form1" enctype="multipart/form-data" action="cadd.php" onSubmit="return validar()">
+ <form method="post" name="form1" id="form1" enctype="multipart/form-data" action="guardar_inscripcion.php" onSubmit="return validar()">
  
  
 <p align="center" class="Estilo3"><strong>Proporcione la siguiente Informaci&oacute;n</strong> 
@@ -50,7 +50,7 @@ body {
 //se debe conectar con BD
 include('conecta.php');
 //Luego se establece el para metro a consultar
-$sqld = "SELECT * FROM  periodo_escolar ORDER BY id_periodo_e desc";
+$sqld = "SELECT * FROM  periodo_escolar ORDER BY id_periodo_e asc";
 //Se ejecuta la consulta de la tabla
 $sqlcd = mysql_query($sqld);
 //se busca por fila es decir por c/registro
@@ -58,15 +58,15 @@ $rowd = mysql_fetch_assoc($sqlcd);
 //se crea el lista/menu con <select> y se le asigna el nombre (name)
 //con (required) validacion de HTML5; se establece como campo obligatorio.
 ?>
-                    <select name="ID_fecha" id="id_fecha" required="required">
-                      <option></option>
+                    <select name="id_fecha" id="id_fecha" required="required">
+                      <option selected="selected">Seleccionar</option>
                       <?php 
 //se crea el bucle do-while (haga-mientras)
 do { 
 //se muestran los valores  del lista/menu
  //Dentro del <option value="AQUI DEBE ESTAR EL VALOR QUE SE VA GUARDAR EN LA BD"> 
 ?>
-                      <option value="<?php echo $rowd['id_periodo_e']?>" selected="selected">
+                      <option value="<?php echo "".$rowd['fecha_inicio']. " --- " .$rowd['fecha_culminacion']?>">
                         <?php
  //Y despues de <option value="">ES LO QUE SE MUESTRA AL USUARIO EN EL LISTA-MENU</option>
  echo "".$rowd['fecha_inicio']. " --- " .$rowd['fecha_culminacion']; ?>
@@ -102,7 +102,7 @@ $rowd = mysql_fetch_assoc($sqlcd);
 //se crea el lista/menu con <select> y se le asigna el nombre (name)
 //con (required) validacion de HTML5; se establece como campo obligatorio.
 ?>
-                   <select name="grado" id="id_grado" required="required">
+                   <select name="id_grado" id="id_grado" required="required">
 				   <option selected="selected">Seleccionar</option>
                      
                       <?php 
@@ -111,7 +111,7 @@ do {
 //se muestran los valores  del lista/menu
  //Dentro del <option value="AQUI DEBE ESTAR EL VALOR QUE SE VA GUARDAR EN LA BD"> 
 ?>
-                      <option value="<?php echo $rowd['id_grado']?>">
+                      <option value="<?php echo $rowd['nombre_grado']?>">
                         <?php
  //Y despues de <option value="">ES LO QUE SE MUESTRA AL USUARIO EN EL LISTA-MENU</option>
  echo "".$rowd['nombre_grado']; ?>
@@ -148,7 +148,7 @@ $rowd = mysql_fetch_assoc($sqlcd);
 //se crea el lista/menu con <select> y se le asigna el nombre (name)
 //con (required) validacion de HTML5; se establece como campo obligatorio.
 ?>
-                   <select name="seccion" id="id_seccion" required="required">
+                   <select name="id_seccion" id="id_seccion" required="required">
 				   <option selected="selected">Seleccionar</option>
                       
                       <?php 
@@ -158,7 +158,7 @@ do {
  //Dentro del <option value="AQUI DEBE ESTAR EL VALOR QUE SE VA GUARDAR EN LA BD"> 
 ?>
 					
-                      <option value="<?php echo $rowd['id_seccion']?>" >
+                      <option value="<?php echo $rowd['nombre_seccion']?>" >
                         <?php
  //Y despues de <option value="">ES LO QUE SE MUESTRA AL USUARIO EN EL LISTA-MENU</option>
  echo "".$rowd['nombre_seccion']; ?>
@@ -182,7 +182,7 @@ while ($rowd= mysql_fetch_assoc($sqlcd));
 			  
 	
 
-	<input type="hidden" id="id_odt" name="id_odt" value="<?php  echo "$cedula_a"; ?>"  />
+	<input type="hidden" id="cedula_a" name="cedula_a" value="<?php  echo "$cedula_a"; ?>"  />
    <br />
 </br>
    

@@ -74,14 +74,20 @@ echo '<center><table width="73%"  align="center">
             </table>
 <p>&nbsp;</p>
             </form>
+	
+	</div>
+	
 			<center><h2>Año Escolar</h2></center>
-  <table width="650"  border="1" bordercolor="#CCCCCC" class="tabla1"/>
-
+  
+  
+        <table width="100%" border="1" class="table table-bordered table-hover">
+  <tr class="info">
+  
    <TR bgcolor="#E4E4E7">
-	<TH >#</TH>
+	<TH >Codigo Inscripcion</TH>
 	<TH width="2000">Año escolar</TH>
-	<TH>Seccion</TH>
 	<TH>Grado</TH>
+	<TH>Seccion</TH>
 	
   </tr>
   
@@ -106,9 +112,9 @@ echo '<center><table width="73%"  align="center">
     {
  		
 		echo "<td><center>$row[1]</td>";
-       	echo "<td><center>$row[2]</td>";
-		echo "<td><center>$row[3]</td>";
+       	echo "<td><center>$row[3]</td>";
 		echo "<td><center>$row[4]</td>";
+		echo "<td><center>$row[5]</td>";
 		echo "<td>
 		<a href='modificartp.php?tp_odt=$row[0]'<center>-->Modificar
 		<br>
