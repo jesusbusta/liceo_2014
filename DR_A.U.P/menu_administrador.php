@@ -78,6 +78,14 @@ body {
           </ul>
 </li>
 <li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>MATERTA-ALUMNO</a>
+ <ul class="dropdown-menu" role="menu">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="reg_materias.php"><i class="icon-user"></i> Registrar</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="buscar_alumno_inscripcion_periodo.php"><i class="icon-user"></i> Registrar</a></li>
+          </ul>
+		  
+</li>
+<li class="dropdown">
 <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-lock"></i>Segurida</a>
  <ul class="dropdown-menu" role="menu">
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="RespaldoBBDD/exportar.php"><i class="icon-lock"></i> Respaldar BD</a></li>

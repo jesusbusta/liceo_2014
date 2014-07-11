@@ -17,6 +17,8 @@ body {
 </head>
 
 <body>
+
+<form name="form1" method="post" action="add.php" enctype="multipart/form-data">
 <?php
 $a1 = $_POST['CEDULA_A']; 
 $result = mysql_query("SELECT * FROM alumnos WHERE cedula_a='$a1'");
@@ -50,7 +52,7 @@ echo '<center><table width="73%"  align="center">
       <table width="100%" height="412" align="center">
         <tr>
           <td height="406" align="center" valign="middle"><div>
-            <form name="form1" method="post" action="modificar_alumno3.php">
+
               
 <table width="100%" border="1" class="table table-bordered table-hover">
   <tr class="info">
@@ -143,12 +145,58 @@ echo '<center><table width="73%"  align="center">
  <tr><td ><?php echo "<a href='add.php?cedula_a=$a1'<center>Agregar"?></td></tr>
  </table>
 
+  <!--fila 2 -->		  
+			 <table width="100%" border="1" class="table table-bordered table-hover">
+                <tr>
+                  <td width="29%" height="58" align="center" valign="top"><strong>Grado</strong></td>
+                  <td width="71%" align="center"><center>
+                    <span class="inserta_tablas2">
+                    <?php
+//se debe conectar con BD
+include('conecta.php');
+
+//Luego se establece el para metro a consultar
+$sqld = "SELECT * FROM  grado ORDER BY id_grado  asc";
+//Se ejecuta la consulta de la tabla
+$sqlcd = mysql_query($sqld);
+//se busca por fila es decir por c/registro
+$rowd = mysql_fetch_assoc($sqlcd);
+//se crea el lista/menu con <select> y se le asigna el nombre (name)
+//con (required) validacion de HTML5; se establece como campo obligatorio.
+?>
+                   <select name="id_grado" id="id_grado" required="required">
+				   <option selected="selected">Seleccionar</option>
+                     
+                      <?php 
+//se crea el bucle do-while (haga-mientras)
+do { 
+//se muestran los valores  del lista/menu
+ //Dentro del <option value="AQUI DEBE ESTAR EL VALOR QUE SE VA GUARDAR EN LA BD"> 
+?>
+                      <option value="<?php echo $rowd['id_grado']?>">
+                        <?php
+ //Y despues de <option value="">ES LO QUE SE MUESTRA AL USUARIO EN EL LISTA-MENU</option>
+ echo "".$rowd['nombre_grado']; ?>
+                        </option>
+                      <?php
+} 
+//se ejecuta la repeticion mientras existan registros
+while ($rowd= mysql_fetch_assoc($sqlcd));
+//se cierra el lista/menu con </select>
+?>
+                    </select>
+                    </span>
+                  </center></td>
+                </tr>
+              </table>
+			  
+  <input type="hidden" id"cedula_a" name="cedula_a" value="<?php echo $a1?>" />
+ 
+  
+  <input type="submit" name="Agregar">
   
   
-  
-  
-  
-  
+</form>
   
   
 	

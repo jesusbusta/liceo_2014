@@ -15,7 +15,37 @@ create table alumnos
 insert into alumnos (id_alumno, id_periodo_e, id_representante, nombres_a, apellidos_a, cedula_a, sexo_a, fecha_n, edad_a, lugar_n_a) values (1, "1", 7, "luiggi antonio", "contreras flores", "20142467", "femenino", "1991-02-07", 25, "santa barbara del zulia");
 insert into alumnos (id_alumno, id_periodo_e, id_representante, nombres_a, apellidos_a, cedula_a, sexo_a, fecha_n, edad_a, lugar_n_a) values (21, "10", 2, "keiner jose", "flores jimenez", "21939830", "masculino", "2001-05-22", 15, "el vigia merida");
 insert into alumnos (id_alumno, id_periodo_e, id_representante, nombres_a, apellidos_a, cedula_a, sexo_a, fecha_n, edad_a, lugar_n_a) values (22, "7", 3, "junior david", "rojas toledo", "28954231", "masculino", "2002-11-13", 12, "el chivo estado zulia");
-insert into alumnos (id_alumno, id_periodo_e, id_representante, nombres_a, apellidos_a, cedula_a, sexo_a, fecha_n, edad_a, lugar_n_a) values (23, "2", 4, "Douglas", "Galvis", "16906699", "M", "2010-06-07", 31, "vigia");
+insert into alumnos (id_alumno, id_periodo_e, id_representante, nombres_a, apellidos_a, cedula_a, sexo_a, fecha_n, edad_a, lugar_n_a) values (23, "2", 4, "karol", "bustamante", "16906699", "M", "2010-06-07", 29, "vigia");
+insert into alumnos (id_alumno, id_periodo_e, id_representante, nombres_a, apellidos_a, cedula_a, sexo_a, fecha_n, edad_a, lugar_n_a) values (24, "1", 5, "Jesus", "Bustamante", "18208483", "M", "1989-04-09", 25, "Tovar");
+
+
+create table ano_escolar
+(
+    id_ano_escolar int auto_increment primary key,
+    cod_inscripcion char(50),
+    cedula_a int,
+    periodo_escolar char(50),
+    grado_escolar char(30),
+    seccion char(5),
+    materia1 char(50),
+    materia2 char(50),
+    materia3 char(50),
+    materia4 char(50),
+    materia5 char(50),
+    materia6 char(50),
+    materia7 char(50),
+    materia8 char(50),
+    materia9 char(50),
+    materia10 char(50),
+    materia11 char(50),
+    materia12 char(50),
+    materia13 char(50),
+    materia14 char(50),
+    materia15 char(50)
+);
+
+insert into ano_escolar (id_ano_escolar, cod_inscripcion, cedula_a, periodo_escolar, grado_escolar, seccion, materia1, materia2, materia3, materia4, materia5, materia6, materia7, materia8, materia9, materia10, materia11, materia12, materia13, materia14, materia15) values (17, "octavoD_2014-05-24 --- 2014-05", 18208483, "2014-05-24 --- 2014-05-25", "octavo", "D", "", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0");
+insert into ano_escolar (id_ano_escolar, cod_inscripcion, cedula_a, periodo_escolar, grado_escolar, seccion, materia1, materia2, materia3, materia4, materia5, materia6, materia7, materia8, materia9, materia10, materia11, materia12, materia13, materia14, materia15) values (20, "septimoB_2014-05-30 --- 2014-0", 18208483, "2014-05-30 --- 2014-05-31", "septimo", "B", "", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0");
 
 
 create table grado
@@ -42,6 +72,24 @@ create table materias
 
 insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (2, 1, "82611", "matematica");
 insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (4, 6, "81545", "castellano");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (5, 1, "mat", "maatematicaaa");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (6, 1, "in07", "ingles");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (7, 2, "ca08", "castellano");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (8, 1, "07MAT_14", "Matematica");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (9, 1, "07CAS_14", "Castellano y Literatura");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (10, 1, "07GEO_14", "Geografia de Venezuela");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (11, 1, "07HIST_14", "Historia de Venezuela");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (12, 1, "07INGL_14", "Ingles");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (13, 1, "07EDUCFIS_14", "Educacion Fisica y deporte");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (14, 1, "07ART_14", "Artes Plasticas");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (15, 1, "07CSC_14", "Ciencias");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (16, 1, "07MUS_14", "Musica");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (17, 1, "07REG_14", "Religion");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (18, 1, "07BIOL_14", "Biologia");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (19, 1, "07INF_14", "Informatica");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (20, 1, "07GEOUN_14", "Geografia universal");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (21, 1, "07FISC_14", "FISICA I");
+insert into materias (id_materia, id_grado, cod_materia, nom_materia) values (22, 1, "07FRANC_14", "Frances");
 
 
 create table periodo_escolar
@@ -51,19 +99,6 @@ create table periodo_escolar
     fecha_culminacion date
 );
 
-insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (1, "0000-00-00", "0000-00-00");
-insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (2, "2014-05-21", "2014-05-22");
-insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (3, "2014-05-23", "2014-05-24");
-insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (4, "2014-05-24", "2014-05-25");
-insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (5, "2014-05-25", "2014-05-26");
-insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (6, "2014-05-30", "2014-05-31");
-insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (7, "2014-06-13", "2014-05-15");
-insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (8, "2015-05-15", "2014-05-04");
-insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (9, "2016-05-13", "2017-05-07");
-insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (10, "2018-05-12", "2020-05-16");
-insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (11, "2019-06-01", "2020-06-06");
-insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (12, "2010-06-16", "2023-06-17");
-insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (13, "2010-06-07", "2011-06-14");
 insert into periodo_escolar (id_periodo_e, fecha_inicio, fecha_culminacion) values (14, "2030-08-05", "2031-08-05");
 
 
@@ -85,6 +120,7 @@ insert into representantelegal (id_representante, nombres_r, apellidos_r, cedula
 insert into representantelegal (id_representante, nombres_r, apellidos_r, cedula_r, edad_r, parentesco_r, sexo_r, ocupacion_r, telefono_r, direccion_r) values (2, "paula sofia", "dias lopez", "11555847", 42, "madre", "mujer", "bedel", "0275881494", "santa barbara del zulia");
 insert into representantelegal (id_representante, nombres_r, apellidos_r, cedula_r, edad_r, parentesco_r, sexo_r, ocupacion_r, telefono_r, direccion_r) values (3, "maria yuraima", "toledo rangel", "16842892", 30, "madre", "mujer", "obrera", "0275808006", "parque chama");
 insert into representantelegal (id_representante, nombres_r, apellidos_r, cedula_r, edad_r, parentesco_r, sexo_r, ocupacion_r, telefono_r, direccion_r) values (4, "Anggy", "Perez", "16307650", 30, "Madre", "F", "Empleada", "010000000", "el vigia");
+insert into representantelegal (id_representante, nombres_r, apellidos_r, cedula_r, edad_r, parentesco_r, sexo_r, ocupacion_r, telefono_r, direccion_r) values (5, "Marcelino", "Bustamante", "5448294", 55, "Padre", "M", "Fotografo", "0424759300", "Tovar");
 
 
 create table seccion
@@ -113,6 +149,6 @@ create table usuarios
 );
 
 insert into usuarios (id_usuario, id_alumno, n_usuario, c_usuario, privilegio) values (1, 1, "luiggi", "1234", "A");
-insert into usuarios (id_usuario, id_alumno, n_usuario, c_usuario, privilegio) values (5, 1, "", "", "A");
+insert into usuarios (id_usuario, id_alumno, n_usuario, c_usuario, privilegio) values (6, 0, "jesus", "12345678", "A");
 
 

@@ -47,10 +47,27 @@ $a1 = $_POST['cedula_a'];
 $a2 = $_POST['id_fecha']; 
 $a3 = $_POST['id_grado']; 
 $a4 = $_POST['id_seccion'];
+$mat1 = $_POST['materia1'];
+$mat2 = $_POST['materia2'];
+$mat3 = $_POST['materia3'];
+$mat4 = $_POST['materia4'];
+$mat5 = $_POST['materia5'];
+$mat6 = $_POST['materia6'];
+$mat7 = $_POST['materia7'];
+$mat8 = $_POST['materia8'];
+$mat9 = $_POST['materia9'];
+$mat10 = $_POST['materia10'];
+$mat11= $_POST['materia11'];
+$mat12 = $_POST['materia12'];
+$mat13 = $_POST['materia13'];
+$mat14 = $_POST['materia14'];
+$mat15 = $_POST['materia15'];
+
+
 
 $codigo_insc = $a3 . $a4 . "_" . $a2;
 //insertar representante
-$insertar = "INSERT INTO ano_escolar(id_ano_escolar,cod_inscripcion,cedula_a,periodo_escolar,grado_escolar,seccion) VALUES ('NULL','$codigo_insc','$a1','$a2','$a3','$a4')";
+$insertar = "INSERT INTO ano_escolar(id_ano_escolar,cod_inscripcion,cedula_a,periodo_escolar,grado_escolar,seccion,materia1,materia2,materia3,materia4,materia5,materia6,materia7,materia8,materia9,materia10,materia11,materia12,materia13,materia14,materia15) VALUES ('NULL','$codigo_insc','$a1','$a2','$a3','$a4','$mat1','$mat2','$mat3','$mat4','$mat5','$mat6','$mat7','$mat8','$mat9','$mat10','$mat11','$mat12','$mat13','$mat14','$mat15')";
 $RESULT = mysql_query($insertar);
 if(!$RESULT)
 {

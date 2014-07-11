@@ -67,6 +67,16 @@
               </ul>
 </li>
 <li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-book"></i>MARTERIAS-ALUMNO</a>
+ <ul class="dropdown-menu" role="menu">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="registro_asignatura.php"><i class="icon-book"></i> Registrar</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="icon-trash"></i> Eliminar</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="icon-edit"></i> Modificar</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="icon-search"></i> Buscar</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="icon-list"></i> Consulta General</a></li>
+              </ul>
+</li>
+<li class="dropdown">
 <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>Docente</a>
  <ul class="dropdown-menu" role="menu">
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="registro_docente.php"><i class="icon-user"></i> Registrar</a></li>
