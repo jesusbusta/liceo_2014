@@ -116,7 +116,7 @@ echo '<center><table width="73%"  align="center">
 		echo "<td><center>$row[4]</td>";
 		echo "<td><center>$row[5]</td>";
 		echo "<td>
-		<a href='modificartp.php?tp_odt=$row[0]'<center>-->Modificar
+		<a href='modificar_inscripcion_periodo_1.php?cedula=$a1'<center>-->Modificar
 		<br>
 		<a href='deletetp.php?tp_odt=$row[0]'<center>-->Eliminar</td>";
 
